@@ -1,0 +1,11 @@
+Flask
+psutil
+numpy
+
+scikit-learn
+
+pandas
+matplotlib
+joblib
+kmodes
+pycaret
