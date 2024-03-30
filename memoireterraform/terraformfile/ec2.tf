@@ -39,15 +39,15 @@ resource "aws_instance" "website" {
               sudo usermod -aG docker 
               sudo apt install git -y
               sudo usermod -aG git
-              sudo git clone https://github.com/tallahmad047/projetflask.git
+              sudo git clone https://github.com/tallahmad047/memoireApp.git
              
 
                        
 
 
-              cd projetflask/
-              sudo docker build -t myflaskappv1 .
-              sudo docker run -p 5000:5000 myflaskappv1
+              cd memoireApp/
+              sudo docker build -t memoireApp .
+              sudo docker run -p 5000:5000 mmemoireApp
               
               EOF
 

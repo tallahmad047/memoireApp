@@ -52,3 +52,23 @@ pickle: {'deps_info': {'pip': '23.2.1', 'setuptools': '65.5.0', 'pycaret': '3.2.
 2024-03-28 12:48:19,411:INFO:Preloading libraries
 2024-03-28 12:48:19,411:INFO:Set up data.
 2024-03-28 12:48:19,415:INFO:Set up index.
+2024-03-30 00:07:52,361:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-03-30 00:07:52,361:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-03-30 00:07:52,361:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-03-30 00:07:52,361:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-03-30 00:08:02,735:INFO:Initializing load_model()
+2024-03-30 00:08:02,735:INFO:load_model(model_name=/, platform=None, authentication=None, verbose=True)
+2024-03-30 00:14:43,683:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-03-30 00:14:43,683:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-03-30 00:14:43,683:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-03-30 00:14:43,683:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-03-30 00:14:45,318:INFO:Initializing load_model()
+2024-03-30 00:14:45,318:INFO:load_model(model_name=/, platform=None, authentication=None, verbose=True)
