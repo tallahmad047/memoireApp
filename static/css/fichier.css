@@ -1,0 +1,81 @@
+/* Style de base pour la navbar */
+.navbar {
+  overflow: hidden;
+  background-color: maroon; /* couleur de fond */
+  border-radius:5%;
+}
+
+.bg-brown {
+  background-color: #8B4513; /* Marron */
+  /* Ajoutez d'autres styles selon vos besoins */
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+  color: #fff; /* Couleur du texte */
+}
+.social-icons a {
+  
+  background-color: #fff; /* Fond blanc */
+  padding: 10px; /* Espace autour des icônes */
+  margin-right: 10px; /* Espace entre les icônes */
+  border-radius: 50%; /* Pour obtenir des coins arrondis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  float: right;
+  
+}
+#divinfo{
+  background-color:white;
+  text-align: center;
+  width: 90%;
+  height: auto;
+  border-radius: 7%;
+  max-width: 800px; /* Définissez la largeur maximale de votre contenu */
+  margin: 0 auto; /* Centre le contenu horizontalement */
+  padding: 20px;
+  
+}
+.logo-text {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  color: maroon;
+}
+#monh1{display: block;
+  font-size: 20px;
+  text-align: center;
+  color: maroon;}
+  #contact{
+    background-color: #8B4513;
+    color: white;
+    font-size: 24px;
+    border-radius: 7%;  }
+#monspan {
+  float: left; /* Ajustez la valeur selon votre préférence */
+  
+  
+  
+  background-color: darkgreen;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Animation de transition */
+  
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+th {
+  font-weight: bold;
+}
+
+#monspan:hover {
+  background-color: green; /* Nouvelle couleur au survol */
+}

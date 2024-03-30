@@ -2,6 +2,7 @@
 .navbar {
   overflow: hidden;
   background-color: maroon; /* couleur de fond */
+  border-radius:5%;
 }
 
 .bg-brown {
@@ -23,27 +24,45 @@
   float: right;
   
 }
-
+#divinfo{
+  color: white;
+}
 .social-icons a:last-child {
   margin-right: 0; /* Pas de marge à droite pour le dernier élément */
 }
-.nav2{
-  background-color:white;
-  color: black;
-}
+
 .navbar-nav .nav-link {
   color: #000; /* Couleur du texte en noir */
 }
 .bg-white{
   margin-top: 20px;
 }
+#monspan {
+   right: 50px; /* Ajustez la valeur selon votre préférence */
+  
+  
+  
+  background-color: darkgreen;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Animation de transition */
+  
+}
+
 .logo-text {
   display: block;
   font-size: 20px;
   text-align: center;
   color: maroon;
 }
+#navbarNavDropdown{
+  font-size: 20px;
+  font-style: italic;
+  width: 20%;
 
+}
 /* styles.css */
 #partie-un {
   background-image: url("Hypertension.jpeg");

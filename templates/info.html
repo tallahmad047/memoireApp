@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="{{ url_for('static', filename='css/fichier.css') }}" rel="stylesheet">
+
+</head>
+
+<body id="body">
+    <nav >
+        <div class="navbar navbar-light bg-brown">
+          <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+              <img src="{{ url_for('static', filename='logo_0.jpg') }}" style="width: 50px; height: auto;">
+            </a>
+            <div id="monspan">
+              <span ><i class="fas fa-phone"></i> SAMU
+                Composer le 1515</span>
+            </div>
+          </div>
+         
+          
+          <div class="social-icons">
+           
+            <a href="#"><i class="fab fa-facebook"></i> </a>
+            <a href="#"><i class="fab fa-whatsapp"></i> </a>
+            <a href="#"><i class="fab fa-twitter"></i> </a>
+            <a href="#"><i class="fab fa-linkedin"></i> </a>
+          </div>
+        </div>
+        <div class="navbar navbar-expand-lg navbar-light bg-white" id="fluid">
+          <div class="container-fluid" >
+            <a class="navbar-brand" href="#">
+              <img src="{{ url_for('static', filename='medical-logo.jpg') }}" style="width: 20px; height: auto;">
+              <span class="logo-text">Ensemble, disons non à l'accident vasculaire cérébral (AVC)</span>
+            </a>
+            <button class="navbar-toggler" type="button"
+             data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+             aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">A Propos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Contacts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="{{ url_for('home') }}">Prévention</a>
+                </li>
+                <li class="nav-item dropdown active">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown link
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </nav>
+      <div id="divinfo">
+        <h1>Prévenir l'accident vasculaire cérébral </h1> 
+      Pour éviter la survenue d’un AVC, il est recommandé d’adopter une alimentation équilibrée, 
+      d’arrêter de fumer et de bouger quotidiennement.<br><br>
+      <p>
+        <h2>LE RÔLE DU MÉDECIN TRAITANT DANS LA PRÉVENTION DE L'AVC</h2>
+      Votre médecin joue un grand rôle dans la prévention. À l'occasion d'une consultation, évoquez avec lui votre risque cardiovasculaire et faites le point. Même si vous n'avez aucun facteur de risque apparent, ne négligez pas cet échange. Votre médecin traitant prend en compte l'ensemble de vos facteurs de risque éventuels (âge, pression artérielle, niveau de cholestérol, antécédents familiaux, tabagisme, etc.) pour estimer votre risque cardiovasculaire global.
+
+Suite à cette évaluation, il vous conseille, si besoin, sur les moyens de réduire votre risque cardiovasculaire. Le plus souvent, une modification de votre hygiène de vie (alimentation, activité physique, tabac) est nécessaire.
+
+Changer d’hygiène de vie est indispensable, mais, parfois, ne suffit pas. Votre médecin traitant peut alors vous prescrire un traitement médicamenteux pour limiter les complications cardiovasculaires et en particulier l'accident vasculaire cérébral. Il peut s'agir du traitement d'un diabète, d'une hypercholestérolémie, d'une hypertension artérielle, d'un trouble du rythme cardiaque...
+      </p>
+      <p>
+        <h2>AGIR SUR SES HABITUDES ALIMENTAIRES</h2>
+        Vous n'avez pas besoin de suivre un régime strict pour réduire vos facteurs de risque cardiovasculaire. Il vous suffit de suivre quelques conseils diététiques de base.
+        <h2>Comment équilibrer son alimentation ?</h2>
+
+        Pour un régime alimentaire équilibré, prenez quelques bonnes habitudes.
+
+Évitez une alimentation trop riche en graisses. Préférez par exemple les viandes blanches, les poissons et les légumes aux charcuteries ou viandes rouges consommées en excès.
+
+Méfiez-vous des plats préparés (industriels). Ils sont souvent trop riches en sucres, graisses et sel. Mieux vaut, dans la mesure du possible, préparer vous-même plats et recettes.
+
+Attention au grignotage en dehors des principaux repas. Veillez à manger de tout et de façon équilibrée pendant les repas pour ne pas ressentir de sensation de faim.
+
+Privilégiez une cuisson à la vapeur plutôt qu'au beurre ou en friture. Méfiez-vous aussi des plats mijotés en sauce, riches en graisses.
+
+Adoptez autant que possible un régime alimentaire équilibré, en mangeant fréquemment du poisson, des fruits et des légumes secs, des céréales complètes et en privilégiant l'huile de colza, d'olive, ou de noix.
+
+Modérez votre consommation d'alcool. Il est conseillé de ne pas boire plus de 10 verres de boissons alcoolisées par semaine, sans dépasser 2 verres d'alcool sur une journée et en réservant des jours sans consommation d'alcool.
+En limitant votre apport de graisses et sucres, vous évitez l'excès de poids qui oblige votre cœur à un travail accru et aggrave le risque d'apparition des maladies cardiovasculaires.
+
+</p>
+
+<p>
+  <h2>Éviter l'excès de poids</h2>
+  
+Le surpoids aggrave le risque d'apparition des maladies cardiovasculaires dont l'AVC. En limitant votre apport en graisses et en sucres, vous évitez l'excès de poids qui oblige votre cœur à un travail accru.
+
+La présence de graisse au niveau abdominal augmente le facteur de risque. Le tour taille est excessif 
+lorsqu'il dépasse 80 cm chez la femme et 94 cm chez l'homme.
+Pour savoir si vous êtes en surpoids, calculez votre indice de masse corporelle ou IMC (poids divisé par la taille au carré). En fonction du résultat, il faudra consulter votre médecin pour qu'il évalue votre risque cardiovasculaire global et vous conseille.
+
+Si l’IMC est :
+
+entre 25,0 et 29,9 kg/m², il existe un surpoids ;
+entre 30,0 et 34,9 kg/m², il s’agit d’obésité modérée ;
+entre 35,0 et 39,9 kg/m², il s’agit d’une obésité sévère ;
+plus de 40 kg/m², on parle d’obésité massive.
+</p>
+<p> 
+  <h2> AGIR SUR SA CONSOMMATION DE TABAC</h2>
+ 
+Pour éviter un AVC, il est recommandé de ne pas fumer ou d’arrêter. Votre médecin traitant peut vous accompagner dans cette démarche.
+
+<h3>Pourquoi arrêter de fumer ?</h3>
+Fumer diminue vos capacités respiratoires et cardiaques à l’effort. Votre corps est en effet moins bien oxygéné et vos muscles moins performants.
+
+La cigarette annule aussi la protection naturelle contre le risque de maladies cardiovasculaires dont bénéficient les femmes jusqu’à la ménopause, grâce à leurs hormones.
+
+L'association pilule-tabac multiplie par plus de quatre le risque de faire un accident vasculaire cérébral.
+
+En arrêtant de fumer, vous agissez pour limiter le risque de maladies cardiovasculaires.
+
+<h3>Des aides au sevrage tabagique</h3>
+Si vous avez décidé d'arrêter de fumer, vous pouvez bénéficier d'un coaching 100 % personnalisé en téléchargeant la nouvelle application Tabac info service sur le site tabac-info-service.fr.
+
+Votre médecin traitant peut  également vous aider et vous conseiller sur l’arrêt du tabac. Si vous êtes dépendant au tabac, il peut vous prescrire un traitement de substitution à la nicotine, sous forme de timbre, de gommes à mâcher ou de comprimés à faire fondre sous la langue. Si les dosages sont bien adaptés, ces substituts comblent le manque de nicotine. Les effets désagréables liés à l’arrêt du tabac (comme l’irritabilité, les difficultés de concentration, l’humeur dépressive, les troubles du sommeil ou de l’appétit, etc.) disparaissent ou diminuen
+</p>
+<p>
+  <h2>AGIR SUR SON ACTIVITÉ PHYSIQUE</h2>
+  
+Pour rester en bonne santé et diminuer le risque de survenue d’un AVC, il est recommandé d’adopter une activité physique régulière.
+
+<h3>Pourquoi bouger tous les jours ?</h3>
+Pratiquez une activité physique régulière adaptée à votre capacité physique. Grâce à elle, vous agissez sur plusieurs facteurs à la fois :
+
+vous limitez votre prise de poids ;
+vous diminuez le taux de graisses dans le sang ;
+vous réduisez le risque de diabète et d'hypertension artérielle.
+Elle vous permet de réduire votre risque cardiovasculaire global.
+
+Votre médecin peut vous aider à choisir un programme d'activité adapté à votre aptitude physique et à votre état de santé.
+
+<h3>Des astuces pour intégrer l'activité physique dans votre quotidien</h3> 
+Chaque jour, on peut faire plus d’exercice se déplaçant davantage à pied.
+
+Faire ses courses, se rendre au travail, accompagner les enfants à l’école, peuvent devenir autant d’occasions de marcher. Vous empruntez le bus, le métro ou le tramway ? Montez à bord un arrêt après votre station habituelle, ou descendez un peu avant votre destination. Ainsi, vous pourrez marcher sur une partie du trajet. Vous circulez en voiture ? Garez-vous à distance du lieu où vous vous rendez.
+
+Par ailleurs, vous vous dépenserez davantage en adoptant certaines habitudes :
+
+préférez les escaliers à l'ascenseur, les escalators ou les tapis roulants ;
+si vous avez un chien, emmenez-le en promenade plus fréquemment, et plus longtemps ;
+faites les petits trajets à pieds plutôt qu'en voiture ou en transport en commun ;
+favorisez les balades à pieds durant vos moments libres ;
+essayez chaque jour d'avoir une activité physique. C'est le cas lorsque vous entretenez votre maison (passer l'aspirateur, jardinage, etc.).
+Si vous êtes parent, profitez du week-end pour partager les jeux de vos enfants (ballon, vélo, etc.) ou vous promener avec eux. Pendant la sieste, vous pouvez peut-être faire un peu de gymnastique à la maison, en vous aidant par exemple d’un programme enregistré sur CD ou DVD ou d’une plateforme de jeux vidéo. Si vous vivez dans un logement assez grand, pensez au vélo d’appartement. Enfin, vous pouvez aller à la piscine avec des amis : pendant qu’un adulte surveille les enfants, les autres prennent le temps de nager.
+</p>
+      
+      
+
+      
+        
+        
+       
+
+      </div>
+
+      
+        
+
+        
+        
+
+
+
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<body>
+
+   <br>
+   <br>
+
+
+ </div>
+
+
+</body>
+</html>

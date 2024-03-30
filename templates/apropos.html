@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="{{ url_for('static', filename='css/fichier.css') }}" rel="stylesheet">
+
+</head>
+
+<body id="body">
+    <nav >
+        <div class="navbar navbar-light bg-brown">
+          <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+              <img src="{{ url_for('static', filename='logo_0.jpg') }}" style="width: 50px; height: auto;">
+            </a>
+            <div id="monspan">
+              <span ><i class="fas fa-phone"></i> SAMU
+                Composer le 1515</span>
+            </div>
+          </div>
+         
+          
+          <div class="social-icons">
+           
+            <a href="#"><i class="fab fa-facebook"></i> </a>
+            <a href="#"><i class="fab fa-whatsapp"></i> </a>
+            <a href="#"><i class="fab fa-twitter"></i> </a>
+            <a href="#"><i class="fab fa-linkedin"></i> </a>
+          </div>
+        </div>
+        <div class="navbar navbar-expand-lg navbar-light bg-white" id="fluid">
+          <div class="container-fluid" >
+            <a class="navbar-brand" href="#">
+              <img src="{{ url_for('static', filename='medical-logo.jpg') }}" style="width: 20px; height: auto;">
+              <span class="logo-text">Ensemble, disons non à l'accident vasculaire cérébral (AVC)</span>
+            </a>
+            <button class="navbar-toggler" type="button"
+             data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+             aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">A Propos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Contacts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="{{ url_for('home') }}">Prévention</a>
+                </li>
+                <li class="nav-item dropdown active">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown link
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </nav>
+     <div id="divinfo">
+      <h1>Notre Mission</h1>
+      <div> Aider la population à connaître son statut AVC afin qu’elle bénéficie d’une prise en charge précoce et efficiente pour réduire le risque de survenue de complications cardio – vasculaires.
+        Les maladies non transmissibles (MNT) tuent plus de 40 millions de personnes dans le monde chaque année et plus de 80% des décès prématurés liés aux MNT se produisent dans des pays à revenu faible ou intermédiaire. Selon le rapport de l’OMS 2022,
+         45% des décès sont dus aux MNT au Sénégal dont 20% concernent les maladies cardio-vasculaires.</div>
+     
+         Au Sénégal, l’accident vasculaire cérébral (Avc) est au premier rang des affections neurologiques tant par sa gravité que par sa  fréquence. Selon une étude menée au Chu de Fann, les Avc sont responsables d’un tiers des hospitalisations  et des deux tiers  de la mortalité dans le service neurologie de Dakar.
+
+         Au niveau de la population générale, le taux d’incidence tourne autour de 1 à 2%. Selon les spécialistes de cette pathologie, l’accident vasculaire cérébral est une maladie neurologique qui touche les artères du cerveau. On distingue deux principaux types d’AVC, ischémique et hémorragique. Ces spécialistes estiment que l’AVC constitue un problème majeur de santé publique, du fait de sa fréquence élevée et de sa gravité.Au Sénégal, au service de Neurologie de Dakar, il représente la première cause de décès, 1/3 des lits d’hospitalisation sont occupés par des patients victimes d’AVC. 
+         
+         Face à l’ampleur de la maladie, une journée de sensibilisation est organisée chaque année le 29 octobre par  la communauté internationale.Les principaux facteurs de risque d’AVC sont l’âge avancé, les antécédents familiaux de maladie vasculaire, l’hypertension artérielle, l’obésité́ abdominale, la sédentarité́, le diabète, l’excès de cholestérol dans le sang, le tabac, l’alcool, le stress, les maladies du cœur et des artères du cou. « Même si une mauvaise alimentation (riche en sucre, sel et cholestérol) peut concourir à la survenue de facteurs de risque d’AVC, d’autres maladies, notamment du cœur, des vaisseaux, du sang peuvent également causer un AVC » avait fait savoir Dr Ndiaga Matar Gaye, Neurologue. Selon ce dernier : « il est crucial pour la victime et/ou son entourage de savoir reconnaître rapidement les signes d’un AVC, compte tenu de l’urgence médicale, pouvant être chirurgicale dans certains cas ».Les principaux signes de l’AVC sont entre autres un affaissement du visage, déviation de la bouche, une faiblesse dans un bras ou une jambe, une difficulté́ pour s’exprimer verbalement, un trouble de l’équilibre, une perte de la vision. Malgré l’existence de ce traitement, peu en bénéficient.
+         
+         Selon une étude de l’université Cheikh Anta Diop de Dakar, la majeure partie des malades arrivent à l’hôpital tardivement. C’est-à-dire après plus de 12h. Une situation qui s’explique par l’insuffisance des ressources humaines et matérielles et de l’inaccessibilité aux soins.Pour prévenir ou amoindrir les risques de faire une attaque cérébrale, les spécialistes recommandent 30 minutes de marche par jour. « En pratiquant une activité physique régulière, vous limitez votre prise de poids et diminuez le risque de diabète, d’hypertension artérielle ou de cholestérol. Mieux, vous augmentez votre taux de bon cholestérol et évitez ou retardez le traitement médicamenteux ».
+         
+         infomed.sn avec Rewmi
+     </div>
+   
+
+      
+        
+
+        
+        
+
+
+
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<body>
+
+   <br>
+   <br>
+
+
+ </div>
+
+
+</body>
+</html>

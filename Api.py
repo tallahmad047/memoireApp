@@ -35,6 +35,18 @@ def index():
 @app.route('/index')
 def home():
     return render_template('index.html')
+@app.route('/info')
+def info():
+    return render_template('info.html')
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+@app.route('/apropos')
+def apropos():
+    return render_template('apropos.html')
+
+
+
 
 
 
