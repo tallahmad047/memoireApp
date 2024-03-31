@@ -171,7 +171,7 @@ def predict_datapoint():
         else:
             output = output +'non-malade  ' + '    ' + 'precision' + '   ' + str(prediction.prediction_score.iloc[0] * 100 ) + '%'
             
-        return render_template('single_prediction.html',result=output)
+        return render_template('index.html',result=output)
 
     else:
         return render_template('home.html')

@@ -79,3 +79,57 @@ th {
 #monspan:hover {
   background-color: green; /* Nouvelle couleur au survol */
 }
+#myForm
+{
+	width:50%;
+	margin:auto;
+	padding: 5%;
+	background:white;
+	border-radius: 5px;
+}
+
+label
+{
+	display: inline-block;
+	width: 50%;
+	color: darkblue;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+select,textarea
+{
+				
+	display: inline-block;
+	width: 100%;
+	font-size: 120%;
+  color: darkblue;
+}
+.inp{
+  color: darkblue;
+}
+
+textarea
+{
+	height: 10%;
+}  
+#lastdiv
+{
+  background-color: maroon;
+}
+#col1
+{
+  background-color: #fff;
+  border: solid;
+}
+#col2
+{
+  background-color: #fff;
+  border: solid;
+}
+#col3{background-size:  cover;}
+#body
+{
+	background-color: rgb(23, 139, 247);
+	background-image: url("OIP1.jpeg");
+}
