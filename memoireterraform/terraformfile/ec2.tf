@@ -38,16 +38,20 @@ resource "aws_instance" "website" {
               sudo systemctl restart docker
               sudo usermod -aG docker 
               sudo apt install git -y
-              sudo usermod -aG git
-              sudo git clone https://github.com/tallahmad047/memoireApp.git
+              
+              mkdir /home/ubuntu/tall
+              cd /home/ubuntu/tall
+
+
+              git clone https://github.com/tallahmad047/memoireApp.git  
              
 
                        
 
 
-              cd memoireApp/
-              sudo docker build -t memoireApp .
-              sudo docker run -p 5000:5000 mmemoireApp
+              cd /home/ubuntu/tall/memoireApp
+              sudo docker build -t memoire .
+              sudo docker run -p 5000:5000 memoire
               
               EOF
 
