@@ -19,6 +19,7 @@ from function import ajouter_donnees_au_csv
 
 application = Flask(__name__,template_folder='templates')
 app=application
+app.config['PREFERRED_URL_SCHEME'] = 'https'
 file_handler = FileHandler('errorlog.txt')
 file_handler.setLevel(WARNING)
 
@@ -205,3 +206,4 @@ def get_age_group(age):
 
 if __name__=="__main__":
     app.run(host="0.0.0.0")
+    
