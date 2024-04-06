@@ -74,7 +74,7 @@ def predict_datapoint():
 # 10  map          60142 non-null  int64
         age=int(request.form.get("Age"))
         gender=int(request.form.get("gender"))
-        height=int(request.form.get("height"))
+        height=float(request.form.get("height"))
         weight=float(request.form.get("weight"))
         ap_hi=float(request.form.get("ap_hi"))
         ap_ho=float(request.form.get("ap_lo"))
@@ -134,11 +134,7 @@ def predict_datapoint():
 
         
 
-        #df.head()
-        from sklearn import  preprocessing
-        le = preprocessing.LabelEncoder()
-        df = df.apply(le.fit_transform)
-        df.describe()
+        
 
         #df.head()
        # print(map)
@@ -152,7 +148,7 @@ def predict_datapoint():
         clusters = km.fit_predict(df)
         clusters
         df.insert(0,"clusters",clusters,True)
-        #print(df)
+        print(df)
         
 
         #df.head()
@@ -160,6 +156,7 @@ def predict_datapoint():
         #print(df)
         # Récupérer la dernière ligne
         derniere_ligne = df.tail(1)
+        print("voici la derniere ligne", derniere_ligne)
         
          #clusters gender	cholesterol	gluc	smoke	alco	active	cardio	age_group	bmi	map
         # Afficher la dernière ligne
