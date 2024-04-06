@@ -168,9 +168,9 @@ def predict_datapoint():
         print(prediction)
        
         if prediction.prediction_label.any()==1 :
-            output = output +'Malade  '+ '   ' +'precision' + '   ' + str(prediction.prediction_score.iloc[0] * 100 )+ '%'
+            output = output +'a un risque de dévelloper un AVC  '+ '   ' +'precision' + '   ' + str(prediction.prediction_score.iloc[0] * 100 )+ '%'
         else:
-            output = output +'non-malade  ' + '    ' + 'precision' + '   ' + str(prediction.prediction_score.iloc[0] * 100 ) + '%'
+            output = output +" n' a pas un risque de dévelloper un AVC " + '    ' + 'precision' + '   ' + str(prediction.prediction_score.iloc[0] * 100 ) + '%'
             
         return render_template('index.html',result=output)
 
