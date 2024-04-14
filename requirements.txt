@@ -1,11 +1,12 @@
 Flask
 psutil
-numpy
+numpy==1.19.5
+
 
 scikit-learn
 
-pandas
+pandas==1.4.3
 matplotlib
 joblib
 kmodes
-pycaret
+pycaret==2.3.10
