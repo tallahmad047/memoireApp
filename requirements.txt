@@ -1,11 +1,11 @@
 Flask
 psutil
-numpy
 
-scikit-learn
+
 
 pandas
 matplotlib
 joblib
-kmodes
-pycaret
+numpy==1.19.5
+pycaret==2.3.10
+pickle

@@ -12,9 +12,12 @@ import pickle
 import numpy as np
 import pandas as pd
 from logging import FileHandler,WARNING
-from sklearn.model_selection import train_test_split
-from pycaret.classification import *
+import joblib
+
+
 from function import ajouter_donnees_au_csv
+
+
 
 
 application = Flask(__name__,template_folder='templates')
@@ -25,8 +28,13 @@ file_handler.setLevel(WARNING)
 
 #scaler=pickle.load(open('/config/workspace/Notebook/StandardScaler.pkl', 'rb'))
 #model = pickle.load(open('c:/Users/talla/Music/Memoire/memoireApp/memoireknn_model.pkl', 'rb'))
-file_path1   = 'code'
-model = load_model(file_path1)
+#file_path1   = 'code'
+#model = load_model(file_path1)
+# with open('code.pkl', 'rb') as file:
+#     model = pickle.load(file)
+# dir(model)
+model = joblib.load('memoirerandom_forest_model1.pkl')
+dir(model)
 
 ## Route for homepage
 
@@ -148,26 +156,32 @@ def predict_datapoint():
         clusters = km.fit_predict(df)
         clusters
         df.insert(0,"clusters",clusters,True)
-        print(df)
-        
+        #print(df)
+        x = df.drop(['gender'], axis=1)
 
         #df.head()
 
         #print(df)
         # Récupérer la dernière ligne
-        derniere_ligne = df.tail(1)
+        derniere_ligne = x.tail(1)
         print("voici la derniere ligne", derniere_ligne)
+        X_new = derniere_ligne.values.tolist()
+        print(X_new)
+       
         
          #clusters gender	cholesterol	gluc	smoke	alco	active	cardio	age_group	bmi	map
         # Afficher la dernière ligne
-        prediction = predict_model(model,derniere_ligne)
+        prediction = model.predict(X_new)
+        #prediction = predict_model(model,derniere_ligne)
         #model_eval(prediction.prediction_label,y_test)
+        
         print(prediction)
+        
        
-        if prediction.prediction_label.any()==1 :
-            output = output +'a un risque de dévelloper un AVC  '+ '   ' +'precision' + '   ' + str(prediction.prediction_score.iloc[0] * 100 )+ '%'
+        if prediction[0]==1 :
+            output = output +'a un risque de dévelloper un AVC  '
         else:
-            output = output +" n' a pas un risque de dévelloper un AVC " + '    ' + 'precision' + '   ' + str(prediction.prediction_score.iloc[0] * 100 ) + '%'
+            output = output +" n' a pas un risque de dévelloper un AVC " 
             
         return render_template('index.html',result=output)
 
