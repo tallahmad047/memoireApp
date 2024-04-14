@@ -1,10 +1,9 @@
 Flask
 psutil
 numpy
-
-
-pandas==1.4.3
+pandas
 matplotlib
 joblib
 kmodes
 pycaret
+scikit-learn
