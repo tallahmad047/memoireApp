@@ -9,7 +9,8 @@ def ajouter_donnees_au_csv(data, csv_path):
     new_row = pd.DataFrame([data], columns=df.columns)
 
     # Ajouter la nouvelle ligne au DataFrame existant
-    df = df.append(new_row, ignore_index=True)
+    #df = df.append(new_row, ignore_index=True)
+    df = pd.concat([df, new_row])
 
     # Sauvegarder le DataFrame mis à jour dans le même fichier CSV
     df.to_csv(csv_path, index=False)
