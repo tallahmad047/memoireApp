@@ -3,7 +3,6 @@ psutil
 numpy==1.19.5
 
 
-scikit-learn
 
 pandas==1.4.3
 matplotlib
