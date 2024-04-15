@@ -113,6 +113,8 @@ def predict_datapoint():
 
         # Utiliser la fonction pour ajouter les données au fichier CSV
         df = ajouter_donnees_au_csv(data, file_path)
+        print(df.columns)
+
 
         # Afficher le DataFrame mis à jour
        
