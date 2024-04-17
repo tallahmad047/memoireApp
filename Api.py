@@ -178,12 +178,16 @@ def predict_datapoint():
         #model_eval(prediction.prediction_label,y_test)
         
         print(prediction)
+        prediction_proba = model.predict_proba(X_new)  # Assuming X_new is new data
+        predicted_class = prediction_proba[0].argmax()  # Get the predicted class index (0 or 1)
+        risk_proba = prediction_proba[0][predicted_class]  # Probability of the predicted class
+        print(risk_proba)
         
        
         if prediction[0]==1 :
-            output = output +'a un risque de dévelloper un AVC  '
+            output = output +'a un risque de dévelloper un AVC  '+ str(risk_proba * 100) + '%'
         else:
-            output = output +" n' a pas un risque de dévelloper un AVC " 
+            output = output +" n' a pas un risque de dévelloper un AVC " + str(risk_proba * 100) + '%'
             
         return render_template('index.html',result=output)
 
