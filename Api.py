@@ -31,6 +31,7 @@ allowSelfSignedHttps(True)
 application = Flask(__name__,template_folder='templates')
 app=application
 app.config['PREFERRED_URL_SCHEME'] = 'https'
+app.config['PREFERRED_URL_SCHEME'] = 'https'
 file_handler = FileHandler('errorlog.txt')
 file_handler.setLevel(WARNING)
 
@@ -86,7 +87,7 @@ def predict_datapoint():
 # 10  map          60142 non-null  int64
         Age=int(request.form.get("Age"))
         gender=int(request.form.get("gender"))
-        height=int(request.form.get("height"))
+        height=float(request.form.get("height"))
         weight=float(request.form.get("weight"))
         ap_hi=float(request.form.get("ap_hi"))
         ap_ho=float(request.form.get("ap_lo"))
@@ -117,6 +118,8 @@ def predict_datapoint():
 
         # Utiliser la fonction pour ajouter les données au fichier CSV
         df = ajouter_donnees_au_csv(data, file_path)
+        print(df.columns)
+
 
         # Afficher le DataFrame mis à jour
        
@@ -146,11 +149,7 @@ def predict_datapoint():
 
         
 
-        #df.head()
-        from sklearn import  preprocessing
-        le = preprocessing.LabelEncoder()
-        df = df.apply(le.fit_transform)
-        df.describe()
+        
 
         #df.head()
        # print(map)
@@ -165,7 +164,7 @@ def predict_datapoint():
         clusters
         df.insert(0,"clusters",clusters,True)
         #print(df)
-        
+        x = df.drop(['gender'], axis=1)
 
         #df.head()
 
@@ -190,14 +189,20 @@ def predict_datapoint():
         #prediction = model.predict(derniere_ligne)
         prediction = predict_model(model,derniere_ligne)
         #model_eval(prediction.prediction_label,y_test)
-        print(prediction)
+        
+        # print(prediction)
+        # prediction_proba = model.predict_proba(X_new)  # Assuming X_new is new data
+        # predicted_class = prediction_proba[0].argmax()  # Get the predicted class index (0 or 1)
+        # risk_proba = prediction_proba[0][predicted_class]  # Probability of the predicted class
+        # print(risk_proba)
+        
        
         if prediction.prediction_label.any()==1:
     
 
-            output = output +'Malade  '+ '   ' +'precision' + '   ' + str(prediction.prediction_score.iloc[0] * 100 )+ '%'
+            output = output +' un risque de dévelloper un AVC '+ '   ' +'precision' + '   ' + str(prediction.prediction_score.iloc[0] * 100 )+ '%'
         else:
-            output = output +'non-malade  ' + '    ' + 'precision' + '   ' + str(prediction.prediction_score.iloc[0] * 100 ) + '%'
+            output = output +" n' a pas un risque de dévelloper un AVC " + '   ' +'precision' + '   '+ str(prediction.prediction_score.iloc[0] * 100) + '%'
             
         return render_template('index.html',result=output)
 
