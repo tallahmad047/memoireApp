@@ -76,107 +76,126 @@
     </div>
     
   </nav>
- <div class="login">
-	
+ <div class="container">
+  <div class="form-container">
     <form action="{{ url_for('predict_datapoint')}}" method="post" id= 'myForm'>
    
-        <label for="gender_female">Age</label> <br>
-        <input type="text" name="Age" placeholder="Age" required="required" class="inp" /><br> 
-        <label for="gender_male">Gender</label><br>
-        <p class="inp">
-            <input type="radio" id="gender_male" name="gender" value="1" required class="inp" >Male
-            <input type="radio" id="gender_female" name="gender" value="0" required class="inp" >Female
-        </p>
-        
-            <br>
+      <label for="gender_female">Age</label> <br>
+      <input type="number" name="Age" placeholder="Age" required="required" class="inp" id="inputText" /><br> 
+      <label for="gender_male">Gender</label><br>
+      <p class="inp">
+          <input type="radio" id="gender_male" name="gender" value="1" required class="inp" > Male
+          <input type="radio" id="gender_female" name="gender" value="0" required class="inp" > Female
+      </p>
+      
+          <br>
+     
+      
+      
+
+      
+      
+      <label for="gender_female">Cholesterol</label> 
+      <select name="cholesterol" required>
+        <option value="1">Normal</option>
+        <option value="2">Élevé</option>
+        <option value="3">Très élevé</option>
+      </select><br>
+      <br>
+      <label for="gender_female">Glucose</label> 
+      <select name="gluc" required>
+        <option value="1">Normal</option>
+        <option value="2">Élevé</option>
+        <option value="3">Très élevé</option>
+      </select><br>
+      
+      <label for="gender_male">Smoke</label><br>
+      <p class="inp">
+          <input type="radio" id="smoke_non" name="smoke" value="0" required class="inp" > Non-fumeur
+      
+
+          <input type="radio" id="smoke_yes" name="smoke" value="1">Fumeur <br>
+      </p>
+     
+      <label for="gender_male">Alcool</label><br>
+      <p class="inp">
+          <input type="radio" id="alco_non" name="alco" value="0" required class="inp" > Non buveur
+     
+
+      <input type="radio" id="alco_yes" name="alco" value="1" class="inp" > Buveur
+      </p>
+      
+       <br>
+
+
+       <label for="active_inactive">Activité Physique</label> <br>
+       <p class="inp">
+          <input type="radio" id="active_inactive" name="active" value="0" required class="inp" > Inactif
+      
+      
+      
+      <input type="radio" id="active_active" name="active" value="1" class="inp" > Actif
+       </p>
        
-        
-        
+       <br>
+      <label for="height">Taille (cm):</label>
+      <input type="number" id="inputText" name="height" required><br><br>
 
-        
-        
-        <label for="gender_female">Cholesterol</label> 
-        <select name="cholesterol" required>
-          <option value="1">Normal</option>
-          <option value="2">Élevé</option>
-          <option value="3">Très élevé</option>
-        </select><br>
-        <br>
-        <label for="gender_female">Glucose</label> 
-        <select name="gluc" required>
-          <option value="1">Normal</option>
-          <option value="2">Élevé</option>
-          <option value="3">Très élevé</option>
-        </select><br>
-        
-        <label for="gender_male">Smoke</label><br>
-        <p class="inp">
-            <input type="radio" id="smoke_non" name="smoke" value="0" required class="inp" > Non-fumeur
-        
+      <label for="weight">Poids (kg):</label>
+      <input type="number" id="inputText" name="weight" required class="inp" ><br><br>
 
-            <input type="radio" id="smoke_yes" name="smoke" value="1">Fumeur <br>
-        </p>
-       
-        <label for="gender_male">Alcool</label><br>
-        <p class="inp">
-            <input type="radio" id="alco_non" name="alco" value="0" required class="inp" > Non buveur
-       
+      <label for="ap_hi">Pression artérielle systolique:</label>
+      <input type="number" id="inputText" name="ap_hi" required class="inp" ><br><br>
 
-        <input type="radio" id="alco_yes" name="alco" value="1" class="inp" > Buveur
-        </p>
-        
-         <br>
+      <label for="ap_lo">Pression artérielle diastolique:</label>
+      <input type="number" id="inputText" name="ap_lo" required class="inp" ><br><br>
+      <label for="ap_lo">Diabetes:</label > <br>
+      
+      <p class="inp">
+          <input type="radio" id="active_inactive" name="Diabetes" value="0" required class="inp" > Non
+          <input type="radio" id="active_active" name="Diabetes" value="1" class="inp" >  Oui<br>
+      </p>
+      
+      
+     
+      
 
-
-         <label for="active_inactive">Activité Physique</label> <br>
-         <p class="inp">
-            <input type="radio" id="active_inactive" name="active" value="0" required class="inp" > Inactif
-        
-        
-        
-        <input type="radio" id="active_active" name="active" value="1" class="inp" > Actif
-         </p>
-         
-         <br>
-        <label for="height">Taille (cm):</label>
-        <input type="number" id="height" name="height" required><br><br>
-
-        <label for="weight">Poids (kg):</label>
-        <input type="number" id="weight" name="weight" required class="inp" ><br><br>
-
-        <label for="ap_hi">Pression artérielle systolique:</label>
-        <input type="number" id="ap_hi" name="ap_hi" required class="inp" ><br><br>
-
-        <label for="ap_lo">Pression artérielle diastolique:</label>
-        <input type="number" id="ap_lo" name="ap_lo" required class="inp" ><br><br>
-        <label for="ap_lo">Diabetes:</label > <br>
-        
-        <p class="inp">
-            <input type="radio" id="active_inactive" name="Diabetes" value="0" required class="inp" > Non
-            <input type="radio" id="active_active" name="Diabetes" value="1" class="inp" >  Oui<br>
-        </p>
-        
-        
-       
-        
-
-        
-        
+      
+      
 
 
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
-    <h1>Person is: {{result}}</h1>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+  </form>
+  </div>
+  <div class="result-container">
+    <!-- La réponse à côté du formulaire -->
+    <h1>La personne <span id="result">{{result}}</span></h1>
+    
+</div>
+</div>
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<body>
+    <script>
+      document.getElementById("inputText").addEventListener('keypress', function(event) {
+          // Vérifier si la touche enfoncée est un chiffre
+          if (event.keyCode >= 48 && event.keyCode <= 57) {
+              // Empêcher l'action par défaut
+              event.preventDefault();
+          }
+        });
+      </script>
+      
+
+    <body>
 
    <br>
    <br>
 
 
- </div>
- {{output}}
+ 
+
 
 </body>
 </html>

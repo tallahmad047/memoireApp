@@ -1,7 +1,8 @@
-import pickle
+from pycaret.classification import *
+import pycaret
+#loaded_model = pycaret.load_model('code')
+file_path1   = 'code'
 
-# Charger le modèle depuis le fichier
-model = pickle.load(open('c:/Users/talla/Music/Memoire/memoireApp/memoireknn_model.pkl', 'rb'))
-
-# Vérifier le type de l'objet
-print(type(model))
+loaded_model= load_model(file_path1)
+model_version = loaded_model.__version__
+print(f"PyCaret version of the saved model: {model_version}")

@@ -13,18 +13,31 @@ import numpy as np
 import pandas as pd
 from logging import FileHandler,WARNING
 from sklearn.model_selection import train_test_split
-from pycaret.classification import *
-from function import ajouter_donnees_au_csv
 
+from function import ajouter_donnees_au_csv
+import urllib.request
+import json
+import os
+import ssl
+
+from pycaret.classification import *
+def allowSelfSignedHttps(allowed):
+    # bypass the server certificate verification on client side
+    if allowed and not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unverified_context', None):
+        ssl._create_default_https_context = ssl._create_unverified_context
+
+allowSelfSignedHttps(True)
 
 application = Flask(__name__,template_folder='templates')
 app=application
+app.config['PREFERRED_URL_SCHEME'] = 'https'
 file_handler = FileHandler('errorlog.txt')
 file_handler.setLevel(WARNING)
 
 #scaler=pickle.load(open('/config/workspace/Notebook/StandardScaler.pkl', 'rb'))
 #model = pickle.load(open('c:/Users/talla/Music/Memoire/memoireApp/memoireknn_model.pkl', 'rb'))
-file_path1   = 'code'
+file_path1   = 'code1'
+
 model = load_model(file_path1)
 
 ## Route for homepage
@@ -71,7 +84,7 @@ def predict_datapoint():
 # 8   age_group    60142 non-null  int64 
 # 9   bmi          60142 non-null  int64 
 # 10  map          60142 non-null  int64
-        age=int(request.form.get("Age"))
+        Age=int(request.form.get("Age"))
         gender=int(request.form.get("gender"))
         height=int(request.form.get("height"))
         weight=float(request.form.get("weight"))
@@ -92,12 +105,12 @@ def predict_datapoint():
         #print(age,'ageyears',age_years)
         #print(age_rounded)
         # Obtenir le groupe d'âge
-        age_group = get_age_group(age)
+        age_group = get_age_group(Age)
         
         #print(age_group,' ', gender,' ',cholesterol,' ',gluc,' ',smoke,Diabetes)
         #data=[id,age,gender,height,weight,ap_hi,ap_ho,cholesterol,gluc,smoke,alco,active,age_rounded,age_years]
         # Données à ajouter
-        data = [gender, height, weight, ap_hi, ap_ho, cholesterol, gluc, smoke, active, age_group, Diabetes, alco]
+        data = [gender, height, weight, ap_hi, ap_ho, cholesterol, gluc, smoke, active, Age,age_group, Diabetes, alco]
 
         # Chemin du fichier CSV
         file_path = 'test.csv'
@@ -159,14 +172,29 @@ def predict_datapoint():
         #print(df)
         # Récupérer la dernière ligne
         derniere_ligne = df.tail(1)
+        last_row_dict = df.tail(1).to_dict(orient='records')[0]
+
+        # Construire la structure JSON
+        data = {
+            "Inputs": {
+                "input1": [last_row_dict]
+            },
+            "GlobalParameters": {}
+        }
+
+        # Imprimer les données JSON
+        print(data)
         
          #clusters gender	cholesterol	gluc	smoke	alco	active	cardio	age_group	bmi	map
         # Afficher la dernière ligne
+        #prediction = model.predict(derniere_ligne)
         prediction = predict_model(model,derniere_ligne)
         #model_eval(prediction.prediction_label,y_test)
         print(prediction)
        
-        if prediction.prediction_label.any()==1 :
+        if prediction.prediction_label.any()==1:
+    
+
             output = output +'Malade  '+ '   ' +'precision' + '   ' + str(prediction.prediction_score.iloc[0] * 100 )+ '%'
         else:
             output = output +'non-malade  ' + '    ' + 'precision' + '   ' + str(prediction.prediction_score.iloc[0] * 100 ) + '%'
@@ -205,3 +233,4 @@ def get_age_group(age):
 
 if __name__=="__main__":
     app.run(host="0.0.0.0")
+    

@@ -133,3 +133,14 @@ textarea
 	background-color: rgb(23, 139, 247);
 	background-image: url("OIP1.jpeg");
 }
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.form-container,
+.result-container {
+  flex: 1;
+  background:white;
+}
