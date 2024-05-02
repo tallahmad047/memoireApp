@@ -201,10 +201,11 @@ def predict_datapoint():
     
 
             output = output +' un risque de dévelloper un AVC '+ '   ' +'precision' + '   ' + str(prediction.prediction_score.iloc[0] * 100 )+ '%'
+            button_color = "btn-danger"
         else:
             output = output +" n' a pas un risque de dévelloper un AVC " + '   ' +'precision' + '   '+ str(prediction.prediction_score.iloc[0] * 100) + '%'
-            
-        return render_template('index.html',result=output)
+            button_color = "btn-success"
+        return render_template('index.html',result=output,button_color=button_color)
 
     else:
         return render_template('home.html')
