@@ -76,16 +76,16 @@
     </div>
     
   </nav>
- <div class="container">
-  <div class="form-container">
+ <div class="container ">
+  <div class="form-container ">
     <form action="{{ url_for('predict_datapoint')}}" method="post" id= 'myForm'>
    
       <label for="gender_female">Age</label> <br>
-      <input type="number" name="Age" placeholder="Age" required="required" class="inp" id="inputText" /><br> 
+      <input type="number" name="Age" placeholder="Age" required="required" class="inp {{ button_color }}" id="inputText" /><br> 
       <label for="gender_male">Gender</label><br>
-      <p class="inp">
-          <input type="radio" id="gender_male" name="gender" value="1" required class="inp" > Male
-          <input type="radio" id="gender_female" name="gender" value="0" required class="inp" > Female
+      <p class="inp {{ button_color }}">
+          <input type="radio" id="gender_male" name="gender" value="1" required class="inp {{ button_color }}" > Male
+          <input type="radio" id="gender_female" name="gender" value="0" required class="inp {{ button_color }}" > Female
       </p>
       
           <br>
@@ -95,14 +95,14 @@
 
       
       
-      <label for="gender_female">Cholesterol</label> 
-      <select name="cholesterol" required>
+      <label for="gender_female" class="{{ button_color }}">Cholesterol</label> 
+      <select name="cholesterol" required class="{{ button_color }}">
         <option value="1">Normal</option>
         <option value="2">Élevé</option>
         <option value="3">Très élevé</option>
       </select><br>
       <br>
-      <label for="gender_female">Glucose</label> 
+      <label for="gender_female" class="{{ button_color }}">Glucose</label> 
       <select name="gluc" required>
         <option value="1">Normal</option>
         <option value="2">Élevé</option>
@@ -110,50 +110,50 @@
       </select><br>
       
       <label for="gender_male">Smoke</label><br>
-      <p class="inp">
-          <input type="radio" id="smoke_non" name="smoke" value="0" required class="inp" > Non-fumeur
+      <p class="inp {{ button_color }}">
+          <input type="radio" id="smoke_non" name="smoke" value="0" required class="inp {{ button_color }}" > Non-fumeur
       
 
           <input type="radio" id="smoke_yes" name="smoke" value="1">Fumeur <br>
       </p>
      
       <label for="gender_male">Alcool</label><br>
-      <p class="inp">
-          <input type="radio" id="alco_non" name="alco" value="0" required class="inp" > Non buveur
+      <p class="inp {{ button_color }}">
+          <input type="radio" id="alco_non" name="alco" value="0" required class="inp {{ button_color }}" > Non buveur
      
 
-      <input type="radio" id="alco_yes" name="alco" value="1" class="inp" > Buveur
+      <input type="radio" id="alco_yes" name="alco" value="1" class="inp {{ button_color }}" > Buveur
       </p>
       
        <br>
 
 
        <label for="active_inactive">Activité Physique</label> <br>
-       <p class="inp">
-          <input type="radio" id="active_inactive" name="active" value="0" required class="inp" > Inactif
+       <p class="inp {{ button_color }}">
+          <input type="radio" id="active_inactive" name="active" value="0" required class="inp {{ button_color }}" > Inactif
       
       
       
-      <input type="radio" id="active_active" name="active" value="1" class="inp" > Actif
+      <input type="radio" id="active_active" name="active" value="1" class="inp {{ button_color }}" > Actif
        </p>
        
        <br>
       <label for="height">Taille (cm):</label>
-      <input type="number" id="inputText" name="height" required><br><br>
+      <input type="number" id="inputText" name="height" required class="inp {{ button_color }}"><br><br>
 
       <label for="weight">Poids (kg):</label>
-      <input type="number" id="inputText" name="weight" required class="inp" ><br><br>
+      <input type="number" id="inputText" name="weight" required class="inp {{ button_color }}" ><br><br>
 
       <label for="ap_hi">Pression artérielle systolique:</label>
-      <input type="number" id="inputText" name="ap_hi" required class="inp" ><br><br>
+      <input type="number" id="inputText" name="ap_hi" required class="inp {{ button_color }}" ><br><br>
 
       <label for="ap_lo">Pression artérielle diastolique:</label>
-      <input type="number" id="inputText" name="ap_lo" required class="inp" ><br><br>
+      <input type="number" id="inputText" name="ap_lo" required class="inp {{ button_color }}" ><br><br>
       <label for="ap_lo">Diabetes:</label > <br>
       
-      <p class="inp">
-          <input type="radio" id="active_inactive" name="Diabetes" value="0" required class="inp" > Non
-          <input type="radio" id="active_active" name="Diabetes" value="1" class="inp" >  Oui<br>
+      <p class="inp {{ button_color }}">
+          <input type="radio" id="active_inactive" name="Diabetes" value="0" required class="inp {{ button_color }}" > Non
+          <input type="radio" id="active_active" name="Diabetes" value="1" class="inp {{ button_color }}" >  Oui<br>
       </p>
       
       

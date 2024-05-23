@@ -1474,3 +1474,159 @@ pickle: {'deps_info': {'pip': '23.2.1', 'setuptools': '65.5.0', 'pycaret': '3.2.
 2024-05-02 21:45:17,509:WARNING:C:\Users\talla\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:271: UserWarning: Persisting input arguments took 0.60s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
   X, y = self._memory_full_transform(
 
+2024-05-19 23:13:14,000:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-19 23:13:14,000:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-19 23:13:14,000:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-19 23:13:14,000:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-19 23:13:18,441:INFO:Initializing load_model()
+2024-05-19 23:13:18,441:INFO:load_model(model_name=code1, platform=None, authentication=None, verbose=True)
+2024-05-19 23:16:17,820:INFO:Initializing predict_model()
+2024-05-19 23:16:17,822:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001F439E5E770>, estimator=Pipeline(memory=FastMemory(location=C:\Users\talla\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['alco', 'Age'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['clusters', 'gender',
+                                             'cholesterol', 'gluc', 'smoke',
+                                             'active', 'age_group', 'BMI',
+                                             'map', 'Diabetes'],
+                                    transformer=SimpleImputer(s...
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('normalize', TransformerWrapper(transformer=RobustScaler())),
+                ('trained_model',
+                 GradientBoostingClassifier(learning_rate=0.04228353798974402,
+                                            max_depth=8,
+                                            max_features=0.9198799805788787,
+                                            min_impurity_decrease=4.677375847907751e-05,
+                                            min_samples_leaf=4,
+                                            min_samples_split=3,
+                                            n_estimators=83, random_state=42,
+                                            subsample=0.3800200379737153))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001F439E0B520>)
+2024-05-19 23:16:17,822:INFO:Checking exceptions
+2024-05-19 23:16:17,822:INFO:Preloading libraries
+2024-05-19 23:16:17,822:INFO:Set up data.
+2024-05-19 23:16:17,831:INFO:Set up index.
+2024-05-19 23:16:19,260:WARNING:C:\Users\talla\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:271: UserWarning: Persisting input arguments took 0.95s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = self._memory_full_transform(
+
+2024-05-19 23:20:19,890:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-19 23:20:19,890:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-19 23:20:19,890:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-19 23:20:19,890:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-19 23:20:24,670:INFO:Initializing load_model()
+2024-05-19 23:20:24,670:INFO:load_model(model_name=code1, platform=None, authentication=None, verbose=True)
+2024-05-19 23:21:44,833:INFO:Initializing predict_model()
+2024-05-19 23:21:44,833:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x0000023B3439B310>, estimator=Pipeline(memory=FastMemory(location=C:\Users\talla\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['alco', 'Age'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['clusters', 'gender',
+                                             'cholesterol', 'gluc', 'smoke',
+                                             'active', 'age_group', 'BMI',
+                                             'map', 'Diabetes'],
+                                    transformer=SimpleImputer(s...
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('normalize', TransformerWrapper(transformer=RobustScaler())),
+                ('trained_model',
+                 GradientBoostingClassifier(learning_rate=0.04228353798974402,
+                                            max_depth=8,
+                                            max_features=0.9198799805788787,
+                                            min_impurity_decrease=4.677375847907751e-05,
+                                            min_samples_leaf=4,
+                                            min_samples_split=3,
+                                            n_estimators=83, random_state=42,
+                                            subsample=0.3800200379737153))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x0000023B3436B640>)
+2024-05-19 23:21:44,834:INFO:Checking exceptions
+2024-05-19 23:21:44,834:INFO:Preloading libraries
+2024-05-19 23:21:44,834:INFO:Set up data.
+2024-05-19 23:21:44,849:INFO:Set up index.
+2024-05-19 23:21:46,405:WARNING:C:\Users\talla\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:271: UserWarning: Persisting input arguments took 0.98s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = self._memory_full_transform(
+
+2024-05-19 23:27:34,551:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-19 23:27:34,553:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-19 23:27:34,553:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-19 23:27:34,553:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-19 23:27:37,800:INFO:Initializing load_model()
+2024-05-19 23:27:37,800:INFO:load_model(model_name=code1, platform=None, authentication=None, verbose=True)
+2024-05-19 23:29:16,597:INFO:Initializing predict_model()
+2024-05-19 23:29:16,597:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x00000256FE04BD90>, estimator=Pipeline(memory=FastMemory(location=C:\Users\talla\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['alco', 'Age'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['clusters', 'gender',
+                                             'cholesterol', 'gluc', 'smoke',
+                                             'active', 'age_group', 'BMI',
+                                             'map', 'Diabetes'],
+                                    transformer=SimpleImputer(s...
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('normalize', TransformerWrapper(transformer=RobustScaler())),
+                ('trained_model',
+                 GradientBoostingClassifier(learning_rate=0.04228353798974402,
+                                            max_depth=8,
+                                            max_features=0.9198799805788787,
+                                            min_impurity_decrease=4.677375847907751e-05,
+                                            min_samples_leaf=4,
+                                            min_samples_split=3,
+                                            n_estimators=83, random_state=42,
+                                            subsample=0.3800200379737153))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000002568009BBE0>)
+2024-05-19 23:29:16,597:INFO:Checking exceptions
+2024-05-19 23:29:16,598:INFO:Preloading libraries
+2024-05-19 23:29:16,598:INFO:Set up data.
+2024-05-19 23:29:16,614:INFO:Set up index.
+2024-05-19 23:29:18,647:WARNING:C:\Users\talla\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:271: UserWarning: Persisting input arguments took 1.37s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = self._memory_full_transform(
+
+2024-05-20 01:04:37,387:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-20 01:04:37,387:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-20 01:04:37,387:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-20 01:04:37,387:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2024-05-20 01:04:40,146:INFO:Initializing load_model()
+2024-05-20 01:04:40,146:INFO:load_model(model_name=code1, platform=None, authentication=None, verbose=True)
+2024-05-20 01:05:37,112:INFO:Initializing predict_model()
+2024-05-20 01:05:37,115:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000002907E67BD90>, estimator=Pipeline(memory=FastMemory(location=C:\Users\talla\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['alco', 'Age'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['clusters', 'gender',
+                                             'cholesterol', 'gluc', 'smoke',
+                                             'active', 'age_group', 'BMI',
+                                             'map', 'Diabetes'],
+                                    transformer=SimpleImputer(s...
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('normalize', TransformerWrapper(transformer=RobustScaler())),
+                ('trained_model',
+                 GradientBoostingClassifier(learning_rate=0.04228353798974402,
+                                            max_depth=8,
+                                            max_features=0.9198799805788787,
+                                            min_impurity_decrease=4.677375847907751e-05,
+                                            min_samples_leaf=4,
+                                            min_samples_split=3,
+                                            n_estimators=83, random_state=42,
+                                            subsample=0.3800200379737153))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000290006CBD90>)
+2024-05-20 01:05:37,115:INFO:Checking exceptions
+2024-05-20 01:05:37,115:INFO:Preloading libraries
+2024-05-20 01:05:37,115:INFO:Set up data.
+2024-05-20 01:05:37,131:INFO:Set up index.
+2024-05-20 01:05:38,679:WARNING:C:\Users\talla\anaconda3\lib\site-packages\pycaret\internal\pipeline.py:271: UserWarning: Persisting input arguments took 0.97s to run.If this happens often in your code, it can cause performance problems (results will be correct in all cases). The reason for this is probably some large input arguments for a wrapped function.
+  X, y = self._memory_full_transform(
+
